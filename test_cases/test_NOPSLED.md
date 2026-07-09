@@ -1,6 +1,6 @@
 # Test Case: Detect Possible Shellcode NOP Sled
 
-## 🔧 Rule Details
+## Rule Details
 
 ```snort
 alert ip any any -> any any (msg:"Possible Shellcode NOP Sled"; content:"|90 90 90 90 90|"; sid:1000011; rev:1;)
@@ -12,7 +12,7 @@ alert ip any any -> any any (msg:"Possible Shellcode NOP Sled"; content:"|90 90 
 
 ---
 
-## 🧪 Test Environment
+## Test Environment
 
 - **VM OS:** Kali Linux  
 - **Snort Version:** 2.9.20  
@@ -24,7 +24,7 @@ alert ip any any -> any any (msg:"Possible Shellcode NOP Sled"; content:"|90 90 
 
 ---
 
-## 🧭 Steps to Reproduce
+## Steps to Reproduce
 
 ### 1. Start Snort on the VM
 
@@ -65,7 +65,7 @@ rm /home/kali/snort-custom-rules/logs/alert
 
 ---
 
-## ✅ Expected Output
+## Expected Output
 
 ```
 [**] [1:1000011:1] Possible Shellcode NOP Sled [**] [Priority: 0] {TCP} 192.168.84.1:XXXXX -> 192.168.84.130:9999
@@ -73,7 +73,7 @@ rm /home/kali/snort-custom-rules/logs/alert
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 - `screenshots/nopsled/NOPSled_test_host.png` – Host machine sending the payload  
 - `screenshots/nopsled/NOPSled_test_VM.png` – VM terminal with Snort alert
