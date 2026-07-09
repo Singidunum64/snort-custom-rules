@@ -1,6 +1,6 @@
 # Test Case: Detect PowerShell Command in HTTP
 
-## 🔧 Rule Details
+## Rule Details
 
 ```snort
 alert tcp any any -> any 80 (msg:"Powershell Command in HTTP"; content:"powershell"; sid:1000010; rev:2;)
@@ -12,7 +12,7 @@ alert tcp any any -> any 80 (msg:"Powershell Command in HTTP"; content:"powershe
 
 ---
 
-## 🧪 Test Environment
+## Test Environment
 
 - **OS:** Kali Linux VM  
 - **Snort Version:** 2.9.20  
@@ -24,7 +24,7 @@ alert tcp any any -> any 80 (msg:"Powershell Command in HTTP"; content:"powershe
 
 ---
 
-## 🧭 Steps to Reproduce
+## Steps to Reproduce
 
 ### 1. Create and Run an HTTP POST Listener on the VM
 
@@ -87,7 +87,7 @@ rm /home/kali/snort-custom-rules/logs/alert
 
 ---
 
-## ✅ Expected Output
+## Expected Output
 
 ```
 [**] [1:1000010:2] Powershell Command in HTTP [**] [Priority: 0] {TCP} 192.168.84.1:<port> -> 192.168.84.130:80
@@ -95,14 +95,14 @@ rm /home/kali/snort-custom-rules/logs/alert
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 - `screenshots/powershell/powershell_test_host.png` — Host running `curl`  
 - `screenshots/powershell/powershell_test_VM.png` — Snort terminal output
 
 ---
 
-## 📝 Notes
+## Notes
 
 - No decoding is required—this matches the literal string `powershell` in the payload.
 - Useful for detecting obfuscated payloads in attack chains involving encoded PowerShell.
