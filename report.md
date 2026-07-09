@@ -1,15 +1,15 @@
 # Final Report: Snort Custom Rules Project
 
-## 🎯 Objective
+## Objective
 Design and test a suite of custom Snort IDS rules in a Kali Linux environment to detect various types of potentially malicious network behavior. This project demonstrates practical understanding of intrusion detection logic, traffic analysis, and rule development.
 
-## 🧪 Environment
+## Environment
 - **OS:** Kali Linux (VM)
 - **Snort Version:** 2.9.20
 - **Tools Used:** Nmap, Ping, curl, netcat, browser, Python HTTP server, FTP server
 - **Testing Mode:** IDS using `-i lo` or `-i eth0`, `-A fast`, and alert logging to custom paths
 
-## 📋 Rule Summary
+## Rule Summary
 
 | SID       | Description                                   | Protocol | Purpose                                      |
 |-----------|-----------------------------------------------|----------|----------------------------------------------|
@@ -28,13 +28,13 @@ Design and test a suite of custom Snort IDS rules in a Kali Linux environment to
 | 1000013   | C2 beaconing via `keep-alive` HTTP header     | TCP      | Detect command-and-control behavior          |
 | 1000014   | IRC traffic on port 6667                      | TCP      | Flag legacy IRC-based botnet communication   |
 
-## 📷 Screenshots
+## Screenshots
 Screenshots for each alert and simulation are located in the `/screenshots/` folder and referenced from their respective test cases.
 
 Example:
 ![Nmap TCP SYN Scan](screenshots/nmap_test.png)
 
-## 📂 Test Cases
+## Test Cases
 Each rule is documented and tested in its own Markdown file inside the `/test_cases/` directory. Test steps, simulation methods, and Snort output are included.
 
 Examples:
@@ -44,30 +44,19 @@ Examples:
 - `test_http_get.md`
 - …
 
-## ✅ Results
+## Results
 - **All 14 rules** successfully triggered alerts in controlled test conditions.
 - Logs saved under `/logs/alerts_<name>.txt`
 - Each test is reproducible with clear, repeatable instructions.
 
-## 🧠 Lessons Learned
+## Lessons Learned
 - Developed deep understanding of Snort rule writing and syntax
 - Gained hands-on experience simulating network attacks across multiple protocols
 - Practiced tuning detection rules to avoid false positives and ensure hits
 - Built a functional and reusable Snort test lab
 
-## 🔗 Future Improvements
+## Future Improvements
 - Expand to IPS testing (inline mode)
 - Add Python automation for log parsing and rule validation
 - Integrate Wireshark for dual-layer traffic analysis
 - Build dashboards for alert visualization using ELK or Splunk
-
----
-
-## ✅ Key Takeaways
-
-This project proves:
-
-- Practical IDS engineering skills
-- Ability to simulate real-world attacks for validation
-- Solid documentation and reproducibility focus
-- Protocol-level understanding across ICMP, TCP, HTTP, FTP, SSH, and more
