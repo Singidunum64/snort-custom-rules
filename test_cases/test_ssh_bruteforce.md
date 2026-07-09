@@ -1,6 +1,6 @@
 # Test Case: SSH Brute Force Attempt Detection
 
-## 🛡️ Rule Information
+## Rule Information
 
 **Snort Rule:**
 ```snort
@@ -12,7 +12,7 @@ Detects multiple TCP SYN packets to port 22 from the same IP within 60 seconds, 
 
 ---
 
-## 🧪 Test Environment
+## Test Environment
 
 - **OS:** Kali Linux VM  
 - **Snort Version:** 2.9.20  
@@ -22,7 +22,7 @@ Detects multiple TCP SYN packets to port 22 from the same IP within 60 seconds, 
 
 ---
 
-## 🧭 Steps to Reproduce
+## Steps to Reproduce
 
 1. **Ensure SSH is running** on the VM:
 
@@ -57,7 +57,7 @@ Detects multiple TCP SYN packets to port 22 from the same IP within 60 seconds, 
 
 ---
 
-## ✅ Expected Output
+## Expected Output
 
 Example Snort alert:
 
@@ -67,7 +67,7 @@ Example Snort alert:
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 - `screenshots/ssh_bruteforce/ssh_bruteforce_test_host.png` – Host sending 6 probes  
 - `screenshots/ssh_bruteforce/ssh_bruteforce_test_VM.png` – Snort detects brute-force attempt
