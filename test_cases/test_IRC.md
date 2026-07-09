@@ -1,6 +1,6 @@
 # Test Case: Detect Outbound IRC Traffic
 
-## 🔧 Rule Details
+## Rule Details
 
 ```snort
 alert tcp any any -> any 6667 (msg:"IRC Traffic Detected - Possible Bot"; sid:1000014; rev:1;)
@@ -16,7 +16,7 @@ alert tcp any any -> any 6667 (msg:"IRC Traffic Detected - Possible Bot"; sid:10
 
 ---
 
-## 🧪 Test Environment
+## Test Environment
 
 - **OS:** Kali Linux VM  
 - **Snort Version:** 2.9.x  
@@ -27,7 +27,7 @@ alert tcp any any -> any 6667 (msg:"IRC Traffic Detected - Possible Bot"; sid:10
 
 ---
 
-## 🧭 Steps to Reproduce
+## Steps to Reproduce
 
 ### 1. Start Snort on the VM
 
@@ -54,7 +54,7 @@ echo -e "NICK botuser\r\nUSER botuser 0 * :Bot\r\nJOIN #channel\r\n" | nc <VM_IP
 
 ---
 
-## ✅ Expected Output
+## Expected Output
 
 ```
 [**] [1:1000014:1] IRC Traffic Detected - Possible Bot [**] [Priority: 0] {TCP} 192.168.84.1:xxxxx -> 192.168.84.130:6667
@@ -65,7 +65,7 @@ echo -e "NICK botuser\r\nUSER botuser 0 * :Bot\r\nJOIN #channel\r\n" | nc <VM_IP
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 - `screenshots/irc/IRC_test_host.png` — Host sending IRC-like payload  
 - `screenshots/irc/IRC_test_VM.png` — VM showing Snort alert
