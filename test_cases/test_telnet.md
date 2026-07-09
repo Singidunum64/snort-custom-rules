@@ -1,6 +1,6 @@
 # Test Case: Telnet Connection Attempt Detection
 
-## 🔧 Rule Details
+## Rule Details
 
 ```snort
 alert tcp any any -> any 23 (msg:"Telnet Connection Attempt"; flags:S; sid:1000009; rev:1;)
@@ -11,7 +11,7 @@ alert tcp any any -> any 23 (msg:"Telnet Connection Attempt"; flags:S; sid:10000
 
 ---
 
-## 🧪 Test Environment
+## Test Environment
 
 - **OS:** Kali Linux VM  
 - **Snort Version:** 2.9.20  
@@ -22,7 +22,7 @@ alert tcp any any -> any 23 (msg:"Telnet Connection Attempt"; flags:S; sid:10000
 
 ---
 
-## 🧭 Steps to Reproduce
+## Steps to Reproduce
 
 1. **Start Telnet Service on VM:**
 
@@ -74,7 +74,7 @@ alert tcp any any -> any 23 (msg:"Telnet Connection Attempt"; flags:S; sid:10000
 
 ---
 
-## ✅ Expected Output
+## Expected Output
 
 Example alert:
 ```
@@ -83,14 +83,14 @@ Example alert:
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 - `screenshots/telnet/telnet_test_host.png` – Host running `nc -zv`
 - `screenshots/telnet/telnet_test_VM.png` – VM terminal with Snort alert
 
 ---
 
-## 🔒 Post-Test Cleanup
+## Post-Test Cleanup
 
 Disable Telnet for security:
 
@@ -102,7 +102,7 @@ Or comment out the Telnet line in `/etc/inetd.conf` and restart `inetd`.
 
 ---
 
-## 📝 Notes
+## Notes
 
 - Telnet is insecure and mostly deprecated.
 - This test demonstrates Snort's ability to detect connections to legacy services.
