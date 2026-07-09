@@ -72,7 +72,7 @@ echo -e "NICK botuser\r\nUSER botuser 0 * :Bot\r\nJOIN #channel\r\n" | nc <VM_IP
 
 ---
 
-## 📝 Notes
+## Notes
 
 - IRC traffic may indicate botnet control channels in real attacks.  
 - Use content-based refinement (`NICK`, `PRIVMSG`, etc.) to reduce false positives.  
