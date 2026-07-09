@@ -80,7 +80,7 @@ rm /home/kali/snort-custom-rules/logs/alert
 
 ---
 
-## 📝 Notes
+## Notes
 
 - Matching is raw payload-based, not protocol-specific.
 - This rule is especially helpful in buffer overflow lab simulations.
