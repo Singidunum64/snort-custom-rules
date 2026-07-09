@@ -68,7 +68,7 @@ curl -H "Connection: keep-alive" http://<VM_IP>
 
 ---
 
-## 📝 Notes
+## Notes
 
 - This rule is useful in detecting malware that communicates with a remote server using periodic "keep-alive" pings.  
 - Avoids complex flow/state inspection to ensure compatibility with minimal Snort configurations.
