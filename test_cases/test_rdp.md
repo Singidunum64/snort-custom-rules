@@ -75,7 +75,7 @@ Example alert in Snort log:
 
 ---
 
-## 🔍 Notes
+## Notes
 
 - This test works without a real RDP service running.
 - Only a SYN packet (`nc -z`) is required to match the rule.
