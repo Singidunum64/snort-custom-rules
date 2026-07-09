@@ -1,6 +1,6 @@
 # Test Case: FTP Login Attempt Detection
 
-## 🛡️ Rule Information
+## Rule Information
 
 **Snort Rule:**
 ```snort
