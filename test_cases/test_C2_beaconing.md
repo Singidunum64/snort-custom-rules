@@ -1,6 +1,6 @@
 # Test Case: Detect Possible C2 Beaconing (beaconing pattern)
 
-## 🔧 Rule Details
+## Rule Details
 
 ```snort
 alert tcp any any -> any any (msg:"Possible C2 beaconing"; content:"keep-alive"; sid:1000013; rev:1;)
@@ -14,7 +14,7 @@ alert tcp any any -> any any (msg:"Possible C2 beaconing"; content:"keep-alive";
 
 ---
 
-## 🧪 Test Environment
+## Test Environment
 
 - **OS:** Kali Linux (VM)  
 - **Snort Version:** 2.9.20  
@@ -26,7 +26,7 @@ alert tcp any any -> any any (msg:"Possible C2 beaconing"; content:"keep-alive";
 
 ---
 
-## 🧭 Steps to Reproduce
+## Steps to Reproduce
 
 ### 1. Start Web Server on VM
 
@@ -53,7 +53,7 @@ curl -H "Connection: keep-alive" http://<VM_IP>
 
 ---
 
-## ✅ Expected Output
+## Expected Output
 
 ```
 [**] [1:1000013:1] Possible C2 beaconing [**] [Priority: 0] {TCP} 192.168.84.1:xxxxx -> 192.168.84.130:80
@@ -61,7 +61,7 @@ curl -H "Connection: keep-alive" http://<VM_IP>
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 - `screenshots/c2/C2_beaconing_test_host.png` — Host terminal sending `curl` with `keep-alive` header  
 - `screenshots/c2/C2_beaconing_test_VM.png` — Snort alert appearing in real-time
