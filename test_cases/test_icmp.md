@@ -69,6 +69,6 @@ Snort should generate about 10 alerts (5 requests + 5 replies):
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 - `screenshots/icmp/icmp_test.png` – Snort alert shown in terminal
