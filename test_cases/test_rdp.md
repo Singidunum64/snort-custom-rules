@@ -1,6 +1,6 @@
 # Test Case: Detect RDP Connection Attempt
 
-## 🛡️ Rule Information
+## Rule Information
 
 **Snort Rule:**
 ```snort
@@ -12,7 +12,7 @@ Detects TCP SYN packets targeting port 3389 (used by Remote Desktop Protocol). U
 
 ---
 
-## 🧪 Test Environment
+## Test Environment
 
 - **OS:** Kali Linux VM  
 - **Snort Version:** 2.9.20  
@@ -22,7 +22,7 @@ Detects TCP SYN packets targeting port 3389 (used by Remote Desktop Protocol). U
 
 ---
 
-## 🧭 Steps to Reproduce
+## Steps to Reproduce
 
 1. **Ensure rule is active** in your `custom.rules` file:
 
@@ -58,7 +58,7 @@ Detects TCP SYN packets targeting port 3389 (used by Remote Desktop Protocol). U
 
 ---
 
-## ✅ Expected Output
+## Expected Output
 
 Example alert in Snort log:
 
@@ -68,7 +68,7 @@ Example alert in Snort log:
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 - `screenshots/rdp/rdp_test_host.png` – Host running `nc`
 - `screenshots/rdp/rdp_test_VM.png` – VM terminal with Snort alert
