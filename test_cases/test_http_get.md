@@ -1,6 +1,6 @@
 # Test Case: HTTP GET Request Detection
 
-## 🛡️ Rule Information
+## Rule Information
 
 **Snort Rule:**
 ```snort
@@ -12,7 +12,7 @@ Detects basic HTTP GET requests sent to port 80, commonly used by browsers and t
 
 ---
 
-## 🧪 Test Environment
+## Test Environment
 
 - **OS:** Kali Linux VM  
 - **Snort Version:** 2.9.20  
@@ -22,7 +22,7 @@ Detects basic HTTP GET requests sent to port 80, commonly used by browsers and t
 
 ---
 
-## 🧭 Steps to Reproduce
+## Steps to Reproduce
 
 1. **Start a simple HTTP server** on the VM:
 
@@ -57,7 +57,7 @@ Detects basic HTTP GET requests sent to port 80, commonly used by browsers and t
 
 ---
 
-## ✅ Expected Output
+## Expected Output
 
 Snort should log an alert like:
 
@@ -67,7 +67,7 @@ Snort should log an alert like:
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 - `screenshots/http_get/http_get_test_host.png` – Host sending the GET request  
 - `screenshots/http_get/http_get_test_VM.png` – Snort terminal capturing the alert
