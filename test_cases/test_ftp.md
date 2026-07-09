@@ -12,7 +12,7 @@ Triggers when the `USER` keyword (used in FTP authentication) is detected in tra
 
 ---
 
-## 🧪 Test Environment
+## Test Environment
 
 - **OS:** Kali Linux VM  
 - **Snort Version:** 2.9.20  
@@ -22,7 +22,7 @@ Triggers when the `USER` keyword (used in FTP authentication) is detected in tra
 
 ---
 
-## 🧭 Steps to Reproduce
+## Steps to Reproduce
 
 1. **Start the FTP service** on the VM:
 
@@ -63,7 +63,7 @@ Triggers when the `USER` keyword (used in FTP authentication) is detected in tra
 
 ---
 
-## ✅ Expected Output
+## Expected Output
 
 Example Snort alert:
 
@@ -73,13 +73,13 @@ Example Snort alert:
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 - `screenshots/ftp/ftp_test_host.png` – FTP login attempt from host  
 - `screenshots/ftp/ftp_test_VM.png` – Snort terminal detecting the alert
 
 ---
 
-## 🔍 Notes
+## Notes
 
 - You can change the `USER` keyword to `PASS` or others to detect different stages of the FTP login sequence.
