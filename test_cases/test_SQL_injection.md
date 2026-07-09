@@ -1,6 +1,6 @@
 # Test Case: SQL Injection Attempt in HTTP URI
 
-## 🛡️ Rule Information
+## Rule Information
 
 **Snort Rule:**
 ```snort
@@ -12,7 +12,7 @@ Detects a common SQL injection string (`or 1=1`) within the URI of an HTTP reque
 
 ---
 
-## 🧪 Test Environment
+## Test Environment
 
 - **OS:** Kali Linux VM  
 - **Snort Version:** 2.9.20  
@@ -22,7 +22,7 @@ Detects a common SQL injection string (`or 1=1`) within the URI of an HTTP reque
 
 ---
 
-## 🧭 Steps to Reproduce
+## Steps to Reproduce
 
 1. **Set up a fake endpoint** to simulate a search form:
 
@@ -60,7 +60,7 @@ Detects a common SQL injection string (`or 1=1`) within the URI of an HTTP reque
 
 ---
 
-## ✅ Expected Output
+## Expected Output
 
 Snort should generate an alert like:
 
@@ -70,14 +70,14 @@ Snort should generate an alert like:
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 - `screenshots/sqli/SQL_injection_test_host.png` – Host curl command  
 - `screenshots/sqli/SQL_injection_test_VM.png` – VM showing triggered Snort alert
 
 ---
 
-## 🔍 Notes
+## Notes
 
 - Without `+`, the rule may not trigger if Snort doesn’t decode spaces (`%20`).
 - This rule can be expanded to detect more complex SQLi patterns like `UNION SELECT`, `'1'='1`, etc.
