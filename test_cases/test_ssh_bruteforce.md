@@ -74,6 +74,6 @@ Example Snort alert:
 
 ---
 
-## 🔍 Notes
+## Notes
 
 - You can adjust the detection threshold by modifying `count` and `seconds` in the rule.
