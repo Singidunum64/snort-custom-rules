@@ -63,6 +63,6 @@ Snort should generate alerts like:
 
 ---
 
-## Screenshot
+## Screenshots
 
 - `screenshots/nmap/nmap_test.png` – Nmap scan alert from Snort
