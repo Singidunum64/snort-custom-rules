@@ -74,6 +74,6 @@ Snort should log an alert like:
 
 ---
 
-## 🔍 Notes
+## Notes
 
 - This rule is very general — it can be customized further to match specific URI patterns or hosts.
