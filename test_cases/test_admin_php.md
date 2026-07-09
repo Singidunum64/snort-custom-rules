@@ -1,6 +1,6 @@
 # Test Case: Detect Access to admin.php
 
-## 🔧 Rule Details
+## Rule Details
 
 ```snort
 alert tcp any any -> any 80 (msg:"Access to admin.php"; content:"admin.php"; http_uri; sid:1000012; rev:1;)
@@ -13,7 +13,7 @@ alert tcp any any -> any 80 (msg:"Access to admin.php"; content:"admin.php"; htt
 
 ---
 
-## 🧪 Test Environment
+## Test Environment
 
 - **VM OS:** Kali Linux  
 - **Snort Version:** 2.9.20  
@@ -25,7 +25,7 @@ alert tcp any any -> any 80 (msg:"Access to admin.php"; content:"admin.php"; htt
 
 ---
 
-## 🧭 Steps to Reproduce
+## Steps to Reproduce
 
 ### 1. Create `admin.php` File on the VM
 
@@ -61,7 +61,7 @@ curl http://<VM_IP>/admin.php
 
 ---
 
-## ✅ Expected Output
+## Expected Output
 
 ```
 [**] [1:1000012:1] Access to admin.php [**] [Priority: 0] {TCP} 192.168.84.1:xxxxx -> 192.168.84.130:80
@@ -69,14 +69,14 @@ curl http://<VM_IP>/admin.php
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 - `screenshots/admin_php/admin_php_test_host.png` – Host terminal issuing curl command  
 - `screenshots/admin_php/admin_php_test_VM.png` – Snort terminal showing triggered alert
 
 ---
 
-## 📝 Notes
+## Notes
 
 - If the alert does not fire, verify that `http_inspect` is enabled in `snort.conf`.
 - For troubleshooting, temporarily remove `http_uri` to confirm Snort is receiving the packet and parsing the content.
