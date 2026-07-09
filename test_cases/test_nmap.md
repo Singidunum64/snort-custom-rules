@@ -1,6 +1,6 @@
 # Test Case: Nmap SYN Scan Detection
 
-## 🛡️ Rule Information
+## Rule Information
 
 **Snort Rule:**
 ```snort
@@ -12,7 +12,7 @@ Detects TCP SYN packets typically used in stealthy Nmap scans.
 
 ---
 
-## 🧪 Test Environment
+## Test Environment
 
 - **OS:** Kali Linux VM  
 - **Snort Version:** 2.9.20  
@@ -22,7 +22,7 @@ Detects TCP SYN packets typically used in stealthy Nmap scans.
 
 ---
 
-## 🧭 Steps to Reproduce
+## Steps to Reproduce
 
 1. **Start Snort** in Terminal 1:
 
@@ -53,7 +53,7 @@ Detects TCP SYN packets typically used in stealthy Nmap scans.
 
 ---
 
-## ✅ Expected Output
+## Expected Output
 
 Snort should generate alerts like:
 
@@ -63,6 +63,6 @@ Snort should generate alerts like:
 
 ---
 
-## 📸 Screenshot
+## Screenshot
 
 - `screenshots/nmap/nmap_test.png` – Nmap scan alert from Snort
