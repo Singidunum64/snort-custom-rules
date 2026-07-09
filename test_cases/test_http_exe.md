@@ -75,7 +75,7 @@ Snort should trigger an alert when `.exe` is detected in the HTTP traffic:
 
 ---
 
-## 🔍 Notes
+## Notes
 
 - This rule is based on payload inspection, so it works without `http_uri` or HTTP-specific preprocessors.
 - You can improve precision by using `http_uri` if you later enable `http_inspect`.
