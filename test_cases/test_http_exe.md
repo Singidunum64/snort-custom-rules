@@ -1,6 +1,6 @@
 # Test Case: Suspicious EXE File Download Detection
 
-## 🛡️ Rule Information
+## Rule Information
 
 **Snort Rule:**
 ```snort
@@ -12,7 +12,7 @@ Detects the presence of `.exe` in HTTP traffic, which may indicate an attempted 
 
 ---
 
-## 🧪 Test Environment
+## Test Environment
 
 - **OS:** Kali Linux VM  
 - **Snort Version:** 2.9.20  
@@ -22,7 +22,7 @@ Detects the presence of `.exe` in HTTP traffic, which may indicate an attempted 
 
 ---
 
-## 🧭 Steps to Reproduce
+## Steps to Reproduce
 
 1. **Create a dummy `.exe` file** and start a web server on the VM:
 
@@ -58,7 +58,7 @@ Detects the presence of `.exe` in HTTP traffic, which may indicate an attempted 
 
 ---
 
-## ✅ Expected Output
+## Expected Output
 
 Snort should trigger an alert when `.exe` is detected in the HTTP traffic:
 
@@ -68,7 +68,7 @@ Snort should trigger an alert when `.exe` is detected in the HTTP traffic:
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 - `screenshots/http_exe/http_exe_test_host.png` – Host machine sending the curl request  
 - `screenshots/http_exe/http_exe_test_VM.png` – Snort and web server on the VM
