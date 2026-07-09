@@ -1,6 +1,6 @@
 # Test Case: ICMP Ping Detection
 
-## 🛡️ Rule Information
+## Rule Information
 
 **Snort Rule:**
 ```snort
@@ -12,7 +12,7 @@ Detects ICMP echo requests (ping). Useful for identifying ping sweeps or simple 
 
 ---
 
-## 🧪 Test Environment
+## Test Environment
 
 - **OS:** Kali Linux (VM)
 - **Snort Version:** 2.9.20
@@ -22,7 +22,7 @@ Detects ICMP echo requests (ping). Useful for identifying ping sweeps or simple 
 
 ---
 
-## 🧭 Steps to Reproduce
+## Steps to Reproduce
 
 1. **Capture ICMP traffic** in Terminal 1:
 
@@ -59,7 +59,7 @@ Detects ICMP echo requests (ping). Useful for identifying ping sweeps or simple 
 
 ---
 
-## ✅ Expected Output
+## Expected Output
 
 Snort should generate about 10 alerts (5 requests + 5 replies):
 
